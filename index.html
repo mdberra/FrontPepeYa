@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="descripcion para google" />
+        <meta name="keywords" content="lista de keywords para google" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles-sm-md-lg-xl.css" rel="stylesheet" />
+        <link href="css/typography.css" rel="stylesheet" />
+        <link href="css/typography-sm-md-lg-xl.css" rel="stylesheet" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+        <meta name="application-name" content="Pepe Ya"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png" />       
+        <meta property="og:title" content="Pepe Ya - Préstamos sin vueltas en 24 horas" />
+        <meta property="og:description" content="Descripcion para facebook" />
+        <meta property="og:image" content="http://www.pepeya.com/img/favicon/favicon-main.png" />
+        <title>Pepe Ya - Préstamos sin vueltas en 24 horas</title>
+    </head>
+    <body id="home">
+
+        <!-- HEADER starts -->
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="/">PepeYa.com.ar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-navi" aria-controls="navbar-navi" aria-expanded="false" aria-label="Mostrar navegación">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-navi">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link nav-login" href="#">Iniciá sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-register" href="#">Creá tu cuenta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-help" href="#faq">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-contact" href="#contact">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>            
+        </header>
+        <!-- HEADER ends -->
+
+        <!-- HERO section starts -->
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-5 pepe-lg"><div class="pepe-img"><div></div></div></div>
+                <div class="col-lg-7 ">
+                    <div class="hero-text">
+                        <img class="img-fluid pepe-sm" src="img/pepe-sm.jpg" alt="Pepe Ya" />
+                        <h1>Pepe te da tu <span class="highlight">mini préstamo on-line</span> <span class="lowlight">sin vueltas en 24 hs!</span></h1>
+                        <p class="hero-subtitle">12 años de experiencia lo avalan.</p>
+                        <p class="hero-paragraph">Los mini préstamos están pensados para <b>empleados públicos provinciales, municipales y jubilados</b> de todo el país.</p>
+                        <p class="em">Pepe <u>no</u> tiene en cuenta el Veraz!</p>
+                    </div>
+                    <!-- SIMULATOR starts -->
+                    <div class="card card-big simulator">
+                        <div class="card-body">
+                            <h3>Calculá tu mini préstamo</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="simulator_form_amount"><b>¿Cuánta plata querés?</b></label>
+                                    <input type="range" class="form-control-range simulator-range" id="simulator_form_amount" type="number" min="1000" max="20000" step="10" value="3000" oninput="simulator_form_amount_disp.value = simulator_form_amount.value">
+                                    <ul class="clearfix list-unstyled mb-3">
+                                        <li class="float-left"><span class="sr-only">Monto mínimo: </span><span>$1.000</span></li>
+                                        <li class="float-left text-center"><span class="sr-only">Estás pidiendo: </span><span>$<output id="simulator_form_amount_disp"></output></span></li>
+                                        <li class="float-left text-right"><span class="sr-only">Monto máximo: </span><span>$20.000</span></li>
+                                    </ul>
+                                    <label for="simulator_form_timeframe"><b>¿En cuánto tiempo la vas a devolver?</b></label>
+                                    <input type="range" class="form-control-range simulator-range" id="simulator_form_timeframe" type="number" min="3" max="12" step="10" oninput="simulator_form_timeframe_disp.value = simulator_form_timeframe.value">
+                                    <ul class="clearfix list-unstyled mb-3">
+                                        <li class="float-left"><span class="sr-only">Monto mínimo: </span><span>3 meses</span></li>
+                                        <li class="float-left text-center"><span class="sr-only">Estás pidiendo: </span><span><output id="simulator_form_timeframe_disp"></output> meses</span></li>
+                                        <li class="float-left text-right"><span class="sr-only">Monto máximo: </span><span>12 meses</span></li>
+                                    </ul>
+                                    <p class="text-center mt-3 mb-0"><b>Cuota promedio:</b> <span class="simulator-amount">$627,90</span></p>
+                                </div>
+                                <div class="text-center"><button type="submit" class="btn btn-primary btn-lg mb-0">Pedí tu préstamo ahora <i class="fas fa-caret-right"></i></button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- SIMULATOR ends-->
+                </div>
+            </div>
+        </section>
+        <!-- HERO section ends -->
+
+        <!-- WHY? section starts -->
+        <section class="container why">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>¿Por qué pedirle un mini préstamo a Pepe?</h2>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="far fa-clock feature-icon"></i>
+                            <h3 class="why-title"><span>Porque </span><span>es rápido</span></h3>
+                            <ul>
+                                <li><span>La plata se transfiere en tu cuenta enseguida.</li>
+                                <li><span>La atención es rápida y personalizada.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="far fa-check-square feature-icon"></i>
+                            <h3 class="why-title"><span>Porque </span><span>es fácil</span></h3>
+                            <ul>
+                                <li><span>Podés pedir tu préstamo por internet o por teléfono.</span></li>
+                                <li><span>Las cuotas son todas iguales.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <i class="fas fa-hand-holding-usd feature-icon"></i>
+                            <h3 class="why-title"><span>Porque </span><span>es conveniente</span></h3>
+                            <ul>
+                                <li><span>No tenés gastos de apertura ni gastos de mantenimiento.</span></li>
+                                <li><span>Podés renovar el préstamo en cualquier momento.</span></li>
+                                <li><span>Sin sorpresas: pagás lo mismo cada mes.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3 visible-xl">
+                    <div class="pepe-why"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Pedí tu préstamo ahora <i class="fas fa-caret-right"></i></a>
+            </div>
+        </section>
+        <!-- WHY? section ends -->
+
+        <!-- 4 STEPS section starts -->
+        <section class="highlight four-steps text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>¡En sólo 4 pasos podés tener tu plata!</h2>
+                        <p class="subtitle">Fijate cómo:</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card card-alt">
+                            <div class="card-body">
+                                <p class="step-1"><span class="step-number"><span class="sr-only">Paso </span>1<span class="sr-only">: </span></span>Decile a Pepe cuánta plata querés.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card card-alt">
+                            <div class="card-body">
+                                <p class="step-2"><span class="step-number"><span class="sr-only">Paso </span>2<span class="sr-only">: </span></span>Completá el formulario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card card-alt">
+                            <div class="card-body">
+                                <p class="step-3"><span class="step-number"><span class="sr-only">Paso </span>3<span class="sr-only">: </span></span>Esperá el llamado con la aprobación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card card-alt">
+                            <div class="card-body">
+                                <p class="step-4"><span class="step-number"><span class="sr-only">Paso </span>4<span class="sr-only">: </span></span>¡Pepe te deposita el dinero en tu cuenta en 24 hs!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 4 STEPS section ends -->
+
+        <!-- FAQ section starts -->
+        <section class="container" id="faq">
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <h2>Preguntas frecuentes</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 order-lg-2">
+                    <div class="img-pepe-faq"><div></div></div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p><b>¿Cuáles son los requisitos?</b></p>
+                            <ul>
+                                <li><span>Documento Nacional de Identidad.</span></li>
+                                <li><span>Últimos tres recibos de sueldo.</span></li>
+                                <li><span>CBU.</span></li>
+                                <li><span>Ticket con los dos últimos meses de movimientos del cajero automático.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 order-lg-1" id="faq-block">
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-1"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Cuánta plata puedo solicitar?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-1" class="collapse hide" aria-labelledby="faq-1" data-parent="#faq-block">
+                                <p class="faq-paragraph">Podés pedir de $1.000 hasta $20.000 de préstamo de efectivo y devolverlo hasta en 12 cuotas. Si pagas de acuerdo al trato que hiciste con Pepe, siempre vas a poder contar con él. Si nunca aplicaste, cuando termines de completar el primer formulario, se te va a informar el máximo que se te puede prestar. Mientras más Pepe te conoce, más dinero te puede brindar y menos te va a cobrar.  Si ya aplicaste alguna vez, vas a ver las condiciones específicas para vos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-2"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Dónde y cómo realizo el pago de lo que debo?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-2" class="collapse hide" aria-labelledby="faq-2" data-parent="#faq-block">
+                                <p class="faq-paragraph">El día del vencimiento, Pepe te va a debitar el dinero de la misma cuenta bancaria donde te acreditó los fondos del préstamo. El monto a debitar será: el monto acreditado + el servicio + la tasa de interés + IVA. Lo único que vos tenes que hacer, es asegurarte de que haya saldo suficiente en esa cuenta bancaria. Simple, sin colas, sin pérdida de tiempo ni trámites engorrosos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-3"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Puedo pagar de otra forma que no sea débito directo?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-3" class="collapse hide" aria-labelledby="faq-3" data-parent="#faq-block">
+                                <p class="faq-paragraph">Dejando los fondos en tu cuenta e informándole a Pepe que ya dispones de los fondos, él puede realizar el débito de tu cuenta, sin que debas realizar ningún tramite más.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-4"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Cómo pido el préstamo?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-4" class="collapse hide" aria-labelledby="faq-4" data-parent="#faq-block">
+                                <p class="faq-paragraph">Para obtener tu préstamo de efectivo sólo tenés que:</p>
+                                <ul>
+                                    <li><span>Registrarte completando todos los campos que Pepe necesita para conocerte.</span></li>
+                                    <li><span>Una vez que terminaste este registro, Pepe te responderá si tu préstamo fue aprobado y por qué monto.</span></li>
+                                    <li><span>Sólo que se te acredite en tu banco el monto aprobado. Si lo hiciste antes de las 18 hs lo recibís ese mismo día, sino al día hábil siguiente.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-5"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Cómo recibo la plata?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-5" class="collapse hide" aria-labelledby="faq-5" data-parent="#faq-block">
+                                <p class="faq-paragraph">Pepe te depositará el monto aprobado en el CBU que le indicaste en el momento de la aplicación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p id="faq-6"><button class="collapsed" type="button" data-toggle="collapse" data-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-one"><b>¿Tengo que tener presente algo más?</b> <i class="fas fa-caret-down"></i></button></p>
+                            <div id="faq-collapse-6" class="collapse hide" aria-labelledby="faq-6" data-parent="#faq-block">
+                                <p class="faq-paragraph">Pepe te recomienda tener siempre presentes estos tips:</p>
+                                <ul>
+                                    <li><span>No tenés que abonar ningún anticipo. Esto quiere decir que antes de solicitar el adelanto no tenés que pagar NADA. Sólo debes abonar en la fecha de vencimiento de tu pedido.</span></li>
+                                    <li><span>Para la devolución recordá que Pepe siempre hace el débito en la fecha de vencimiento de tu préstamo.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- FAQ section ends -->
+
+        <!-- FINAL CTA section starts -->
+        <section class="highlight text-center cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2><span>¿Viste qué fácil? ¡Dale, pedí tu </span><span>mini préstamo de hasta $20.000!</span></h2>
+                        <p class="subtitle">¡Tené tu plata disponible en 24 hs!</p>
+                        <a class="btn btn-secondary btn-lg" href="#" role="button">Pedí tu préstamo ahora <i class="fas fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FINAL CTA section ends -->
+
+        <!-- CONTACT section starts -->
+        <section class="container" id="contact">
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <h2>Contacto</h2>
+                    <p class="subtitle">Completá el siguiente formulario para realizar tu solicitud o contactarte con Pepe.</p>
+                </div>
+            </div>
+            <form class="row">
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-name"><b>Nombre y apellido</b></label>
+                    <input type="text" class="form-control form-control-lg" id="form-contact-name" placeholder="Nombre y apellido" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-email"><b>Dirección de correo electrónico</b></label>
+                    <input type="email" class="form-control form-control-lg" id="form-contact-email" placeholder="Ingresá tu correo electrónico" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-phone"><b>Teléfono o celular</b></label>
+                    <input type="text" class="form-control form-control-lg" id="form-contact-phone" placeholder="Tu número de teléfono o número de celular" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-document-number"><b>DNI</b></label>
+                    <input type="text" class="form-control form-control-lg" id="form-contact-document-number" placeholder="Tu número de documento" required />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-amount"><b>Monto</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="form-contact-amount-prepend">$</span>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" id="form-contact-amount" placeholder="1000 a 20000" required />
+                    </div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="form-contact-timeframe"><b>Plazo</b></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" id="form-contact-timeframe" placeholder="3 a 12" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="form-contact-amount-append">meses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="form-contact-message"><b>Mensaje</b></label>
+                    <textarea type="text" class="form-control form-control-lg contact-message" id="form-contact-message" placeholder="Ingresá tu mensaje" required></textarea>
+                </div>
+                <div class="col-md-12 text-right">
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje <i class="fas fa-caret-right"></i></button>
+                </div>
+            </form>
+        </section>
+        <section class="lowlight">
+            <div class="container">
+                <ul class="row list-unstyled">
+                    <li class="col-sm-4"><a href="mailto:PepeYaSA@hotmail.com" class="text-center contact-icon-mail">PepeYaSA@hotmail.com</a></li>
+                    <li class="col-sm-4"><a href="#" class="text-center contact-icon-facebook">PepeYa</a></li>
+                    <li class="col-sm-4"><a href="#" class="text-center contact-icon-instagram">@PepeYaa</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- CONTACT section ends -->
+
+        <!-- TERMS & CONDITIONS section starts -->
+        <section class="container disclaimer">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <h2>Términos y condiciones</h2>
+                    <p>El otorgamiento del préstamo personal se encuentra sujeto a evaluación crediticia y condiciones de contratación. Las condiciones de los préstamos personales variarán de acuerdo a la calificación crediticia del interesado y las condiciones de mercado y políticas vigentes al momento del otorgamiento. Condiciones vigentes o hasta agotar stock de préstamos, lo que ocurra primero. Monto: máximo $ 20.000, mínimo $ 1.000, según calificación crediticia. Plazo: máximo 12 meses, mínimo 3 meses. Tasa Nominal Anual (TNA) máxima 95%, mínima 45%. Sistema de amortización Francés. Ejemplo para un préstamo de $3.000 en 12 meses: Tasa Nominal Anual fija (72%), Costo financiero total ANUAL (92.20%) abona una cuota promedio de $755,73. Los préstamos están disponibles para empleados en relación de dependencia. Los pagos podrán realizarse por débito automático. Se cobrará un fee por la utilización del servicio. Para el caso de mora en el pago de las cuotas la empresa se reserva el derecho de iniciar las acciones legales extrajudiciales y judiciales pertinentes. Para el caso de cancelación anticipada la comisión será del 0%. El incumplimiento en el pago del préstamo puede implicar alguno de los siguientes puntos: 1. Información a las Entidades de Riesgo Crediticio, 2. Prácticas de Cobranza, 3. Intereses por mora. El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326. La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, órgano de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales. El titular podrá en cualquier momento solicitar el retiro o bloqueo de su nombre de los bancos de datos y/o el responsable o usuario que proveyó la información. Decreto 1558/01- Art. 27, 3er párrafo: En toda comunicación con fines de publicidad que se realice por correo, teléfono, correo electrónico, internet u otro medio a distancia a conocer, se deberá indicar, en forma expresa y destacada, la posibilidad del titular del dato de solicitar su retiro o bloqueo, total o parcial, de su nombre de la base de datos.</p>
+                </div>
+            </div>
+        </section>        
+        <!-- TERMS & CONDITIONS section ends -->
+
+        <!-- FOOTER starts -->
+        <footer>
+            <nav class="container clearfix">
+                <ul class="float-left list-unstyled">
+                    <li><a href="/" class="footer-brand">PepeYa.com.ar</a></li>
+                </ul>
+                <ul class="float-right list-unstyled clearfix">
+                    <li class="float-left"><a href="#">Iniciá sesión</a></li>
+                    <li class="float-left ml-3"><a href="#">Creá tu cuenta</a></li>
+                    <li class="float-left ml-3"><a href="#faq">Ayuda</a></li>
+                    <li class="float-left ml-3"><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <p class="text-center">&copy; 2018 PepeYa.com.ar</p>
+        </footer>
+        <!-- FOOTER ends -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/ui-functions.js"></script>
+    </body>
+</html>
